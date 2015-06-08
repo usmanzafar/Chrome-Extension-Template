@@ -1,0 +1,1 @@
+A quick popover that will take the information from the json api and render it - can only be used in chrome extension developer mode
