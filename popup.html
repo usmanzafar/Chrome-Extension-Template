@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Click2Call RealTime Stats</title>
+    <style>
+        body {
+            font-family: "Arial" !important;
+            font-size: 90%;
+            color: #333;
+            margin:0;
+            padding:0;
+        }
+        h2 {
+            color: #333;
+            font-size: 120%;
+            padding: 0px 0px 0px 10px;
+            float: left;
+        }
+        .logo {
+            display: block;
+            padding-left: 10px;
+            padding-top:17px;
+            float: left;
+        }
+        .container {
+            min-width: 400px;
+        }
+        .row {
+            margin:0;
+            padding:0;
+            clear: both;
+            width: 100%;
+        }
+        .col12 {
+            width: 100% !important;
+        }
+
+		.logoholder,.footer {
+            min-height: 45px;
+            background: #ffffff;
+            background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+            background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+            background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+            background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+
+        }
+        .footer {
+            min-height: 20px !important;
+        }
+        .footer-text {
+            font-size: 65%;
+            color: #999;
+            text-align: right;
+            float: right;
+            padding: 5px 15px;
+        }
+		table {
+		    width: 90%;
+		    text-align:left;
+            margin: 0 auto;
+		}
+        th {
+            font-size: 100% !important;
+        }
+        .data-row > td {
+            font-size: 80%;
+            color: #777;
+            padding-left: 4px;
+        }
+
+        .spinner > img {
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
+    <script src="background.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col12 logoholder">
+            <img src="icon.png" class="logo" />
+            <h2>Click2Call RealTime Stats</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col12" id="datatable" hidden="true">
+            <table>
+                <tr>
+                    <th>Calls</th>
+                    <th>Paid Calls</th>
+                    <th>Revenue</th>
+                    <th>Profit</th>
+                </tr>
+                <tr class="data-row">
+                    <td><span id="calls"></span></td>
+                    <td><span id="paidcalls"></span></td>
+                    <td><span id="revenue"></span></td>
+                    <td><span id="profit"></span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="spinner" id="spinner">
+            <img src="ajax-loader.gif" />
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <span class="footer-text">Powered by Click2Call Tech</span>
+    </div>
+    
+</div>
+
+</body>
+</html>
